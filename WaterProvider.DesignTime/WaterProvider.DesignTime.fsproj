@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Library</OutputType>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <Optimize>true</Optimize>
+        <Tailcalls>true</Tailcalls>
+        <DisableImplicitFSharpCoreReference>true</DisableImplicitFSharpCoreReference>
+        <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+        <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="..\WaterProvider.Runtime\ProvidedTypes.fsi">
+          <Link>ProvidedTypes.fsi</Link>
+        </Compile>
+        <Compile Include="..\WaterProvider.Runtime\ProvidedTypes.fs">
+          <Link>ProvidedTypes.fs</Link>
+        </Compile>
+        <Compile Include="..\WaterProvider.Runtime\WaterProvider.Runtime.fs" />
+        <Compile Include="WaterProvider.DesignTime.fs" />
+    </ItemGroup>
+
+</Project>

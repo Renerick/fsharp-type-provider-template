@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "WaterProvider.Runtime", "WaterProvider.Runtime\WaterProvider.Runtime.fsproj", "{0CD824E3-3B75-46BE-BD0C-6B1219EAF747}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "WaterProvider.DesignTime", "WaterProvider.DesignTime\WaterProvider.DesignTime.fsproj", "{38ABEFC9-9864-40EC-9780-094B25064A9E}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "WaterProvider.Tests", "WaterProvider.Tests\WaterProvider.Tests.fsproj", "{706731B4-571B-4D49-8DCB-606C972BFE0A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0CD824E3-3B75-46BE-BD0C-6B1219EAF747}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CD824E3-3B75-46BE-BD0C-6B1219EAF747}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CD824E3-3B75-46BE-BD0C-6B1219EAF747}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CD824E3-3B75-46BE-BD0C-6B1219EAF747}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38ABEFC9-9864-40EC-9780-094B25064A9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38ABEFC9-9864-40EC-9780-094B25064A9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38ABEFC9-9864-40EC-9780-094B25064A9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38ABEFC9-9864-40EC-9780-094B25064A9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{706731B4-571B-4D49-8DCB-606C972BFE0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{706731B4-571B-4D49-8DCB-606C972BFE0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{706731B4-571B-4D49-8DCB-606C972BFE0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{706731B4-571B-4D49-8DCB-606C972BFE0A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Library</OutputType>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <DisableImplicitFSharpCoreReference>true</DisableImplicitFSharpCoreReference>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="WaterProvider.Runtime.fs" />
+        <Compile Include="ProvidedTypes.fsi" />
+        <Compile Include="ProvidedTypes.fs" />
+    </ItemGroup>
+    <ItemGroup>
+        <!-- Be explicit about the version of FSharp.Core since we mention it in the manual nuget package spec -->
+        <PackageReference Include="FSharp.Core" Version="4.3.4" />
+    </ItemGroup>
+
+    <Target Name="_BeforeBuild" BeforeTargets="BeforeBuild">
+        <MSBuild Projects="..\WaterProvider.DesignTime\WaterProvider.DesignTime.fsproj" Targets="Restore" />
+        <MSBuild Projects="..\WaterProvider.DesignTime\WaterProvider.DesignTime.fsproj" Targets="Build" Properties="Configuration=$(Configuration);TargetFramework=netstandard2.0" />
+    </Target>
+    
+    <Target Name="_AfterBuild" AfterTargets="AfterBuild">
+        <CreateItem Include="..\WaterProvider.DesignTime\bin\$(Configuration)\netstandard2.0\*.dll;..\WaterProvider.DesignTime\bin\$(Configuration)\netstandard2.0\*.pdb">
+            <Output TaskParameter="Include" ItemName="DesignTimeBinaries3" />
+        </CreateItem>
+        <Copy SourceFiles="@(DesignTimeBinaries3)" DestinationFolder="$(OutputPath)/../typeproviders/fsharp41/netstandard2.0" />
+    </Target>
+
+</Project>
